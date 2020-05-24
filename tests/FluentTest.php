@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Zeleznypa\Phpunit4240;
 
-use Dibi\Fluent;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
-class DibiTest extends TestCase
+/**
+ * @coversDefaultClass Zeleznypa\Phpunit4240\Fluent;
+ */
+class FluentTest extends TestCase
 {
     /**
      * Tester of 4240 bug report code
@@ -26,6 +28,19 @@ class DibiTest extends TestCase
             ->willReturnSelf();
 
         $fluent->from($from);
+    }
+
+    /**
+     * Tester of from implementation
+     *
+     * @return void
+     * @covers ::from
+     */
+    public function testFrom(): void
+    {
+        $from = 'test';
+        $fluent = new Fluent();
+        self::assertSame($from, $fluent->from($from)->getFrom());
     }
 
     // <editor-fold defaultstate="collapsed" desc="Helper">

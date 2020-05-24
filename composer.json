@@ -11,11 +11,11 @@
     ],
     "require": {
         "php": "~7.2",
-        "dibi/dibi": "~4.1",
         "phpunit/phpunit": "~8.5"
     },
     "autoload": {
         "classmap": [
+            "src",
             "tests"
         ]
     },
