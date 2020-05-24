@@ -1,0 +1,31 @@
+{
+    "name": "zeleznypa/phpunit-4240",
+    "description": "Minimal example of bugreport code",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Železný",
+            "email": "pavel.zelezny@interitty.org"
+        }
+    ],
+    "require": {
+        "php": "~7.2",
+        "dibi/dibi": "~4.1",
+        "phpunit/phpunit": "~8.5"
+    },
+    "autoload": {
+        "classmap": [
+            "tests"
+        ]
+    },
+    "config": {
+        "classmap-authoritative": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
